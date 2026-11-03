@@ -22,7 +22,7 @@ namespace RestaurantApp_Team
         new Restaurant { Name = "Starbuck", Type = "Drink", Rating = 4.7 },
         new Restaurant { Name = "Amazon", Type = "Drink", Rating = 4.5 },
         new Restaurant { Name = "Burgerking", Type = "Fast Food", Rating = 4.3 },
-        new Restaurant { Name = "sushiro", Type = "Japanese", Rating = 4.8 }
+        new Restaurant { Name = "sushiro", Type = "Japanese", Rating = 4.5 }
     };
 
         static void Main(string[] args)
