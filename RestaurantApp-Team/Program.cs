@@ -60,13 +60,28 @@ namespace RestaurantApp_Team
         // คน A รับผิดชอบ
         static void AddRestaurant()
         {
-            Console.WriteLine("กรอกชื่อร้านอาหาร :");
-            string namestore = "";
-            Console.WriteLine("ประเภทร้านอาหาร");
-            string type = "";
-            Console.WriteLine("คะแนนร้านอาหาร");
-           
 
+           
+            Console.Write("กรอกชื่อร้านอาหาร : ");
+            string name = Console.ReadLine();
+            Console.Write("กรอกประเภทร้านอหาร : ");
+            string type = Console.ReadLine();
+            Console.Write("กรอกคะแนนร้านอาหาร (เช่น 4.5) : ");
+            double rating = Convert.ToDouble(Console.ReadLine());
+            restaurants.Add(new Restaurant
+            {
+                Name = name,
+                Type = type,
+                Rating = rating
+            });
+            foreach (var item in restaurants)
+            { 
+                Console.WriteLine("Name : "+ item.Name);
+                Console.WriteLine("type : "+item.Type);
+                Console.WriteLine("Rating : "+item.Rating);
+            }
+            Console.WriteLine("เพิ่มร้านอาหารเรียบร้อยแล้ว!!");
+             
         }
 
         // คน B รับผิดชอบ
