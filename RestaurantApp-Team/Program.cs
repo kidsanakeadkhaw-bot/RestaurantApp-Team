@@ -17,12 +17,7 @@ namespace RestaurantApp_Team
     {
         static List<Restaurant> restaurants = new List<Restaurant>
     {
-        new Restaurant { Name = "KFC", Type = "Fast Food", Rating = 4.2 },
-        new Restaurant { Name = "Tee Noi", Type = "Suki", Rating = 4.9 },
-        new Restaurant { Name = "Starbuck", Type = "Drink", Rating = 4.7 },
-        new Restaurant { Name = "Amazon", Type = "Drink", Rating = 4.5 },
-        new Restaurant { Name = "Burgerking", Type = "Fast Food", Rating = 4.3 },
-        new Restaurant { Name = "sushiro", Type = "Japanese", Rating = 4.5 }
+       
     };
 
         static void Main(string[] args)
@@ -62,13 +57,13 @@ namespace RestaurantApp_Team
         static void AddRestaurant()
         {
 
-            double rating;
-            Console.WriteLine("กรอกชื่อร้านอาหาร :");
+           
+            Console.Write("กรอกชื่อร้านอาหาร : ");
             string name = Console.ReadLine();
-            Console.WriteLine("ประเภทร้านอหาร :");
+            Console.Write("กรอกประเภทร้านอหาร : ");
             string type = Console.ReadLine();
-            Console.WriteLine("คะแนนร้านอาหาร :");
-            rating = double.Parse(Console.ReadLine());
+            Console.Write("กรอกคะแนนร้านอาหาร (เช่น 4.5) : ");
+            double rating = Convert.ToDouble(Console.ReadLine());
             restaurants.Add(new Restaurant
             {
                 Name = name,
