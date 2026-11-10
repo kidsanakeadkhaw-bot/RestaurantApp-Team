@@ -76,7 +76,7 @@ namespace RestaurantApp_Team
                 Console.WriteLine("type : "+item.Type);
                 Console.WriteLine("Rating : "+item.Rating);
             }
-            Console.WriteLine("เพิ่มร้านอาหารเรียบร้อยแล้ว");
+            Console.WriteLine("เพิ่มร้านอาหารเรียบร้อยแล้ว!!");
              
         }
 
