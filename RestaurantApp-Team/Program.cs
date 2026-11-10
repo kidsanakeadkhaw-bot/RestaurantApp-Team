@@ -21,9 +21,7 @@ namespace RestaurantApp_Team
         new Restaurant { Name = "KFC", Type = "Fast Food", Rating = 4.2 },
         new Restaurant { Name = "MK", Type = "Suki", Rating = 4.7 },
         new Restaurant { Name = "Fuji", Type = "Japanese", Rating = 4.8 },
-        new Restaurant { Name = "KFC", Type = "Fast Food", Rating = 4.2 },
-        new Restaurant { Name = "MK", Type = "Suki", Rating = 4.7 },
-        new Restaurant { Name = "Fuji", Type = "Japanese", Rating = 4.8 }
+       
     };
 
         static void Main(string[] args)
@@ -74,7 +72,25 @@ namespace RestaurantApp_Team
         // คน B รับผิดชอบ
         static void ShowGoodRating()
         {
-            Console.WriteLine("Not completed");
+            Console.WriteLine("\n===== Good Rating Restaurant =====");
+
+            var goodRestaurants = restaurants
+                .Where(r => r.Rating >= 4.5)
+                .ToList();
+
+            if (goodRestaurants.Count == 0)
+            {
+                Console.WriteLine("ไม่พบร้านที่มีคะแนนตั้งแต่ 4.5 ขึ้นไป");
+                return;
+            }
+            foreach (var r in goodRestaurants)
+            {
+                Console.WriteLine($"ชื่อร้าน: (r.name)");
+                Console.WriteLine($"ประเภทอาหาร: (r.type)");
+                Console.WriteLine($"คะแนน: (r.Rating)");
+                Console.WriteLine("--------------------------");
+            }
+
         }
 
         // คน C รับผิดชอบ
