@@ -96,7 +96,14 @@ namespace RestaurantApp_Team
         // คน C รับผิดชอบ
         static void ShowSummary()
         {
-            Console.WriteLine("Not completed");
+            var sortedList = restaurants.OrderByDescending(x => x.Rating).ToList();
+            Console.WriteLine("=== รายชื่ออาหารทั้งหมด (เรียงตามคะแนนสูงสุด-ต่ำสุด) ===");
+            int a = 1;
+            foreach(Restaurant item in restaurants)
+            {
+                Console.WriteLine($"{a}. ชื่อร้านที่มีคะแนนสูงสุด : {item.Name} Rate: {item.Rating} \n ชื่อร้านที่มีคะแนนต่ำสุด : {item.Name} Rate : {item.Rating}");
+                a++;
+            }
         }
     }
 
